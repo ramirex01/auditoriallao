@@ -3,63 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página Web</title>
+    <title>Educación Ambiental y Cambio Climático</title>
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
         }
+
+        /* Navegación */
         header {
-            background-color: #24292e;
+            background-color: #1b4332;
             color: #ffffff;
-            padding: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        nav .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #d8f3dc;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #74c69d;
+        }
+
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.85)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: white;
             text-align: center;
+            padding: 4rem 1.5rem;
         }
-        main {
-            flex: 1;
-            max-width: 800px;
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #d8f3dc;
+        }
+
+        /* Contenido General */
+        .container {
+            max-width: 1000px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
         }
-        .card {
+
+        section {
             background: #ffffff;
             border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
+
+        h2 {
+            color: #1b4332;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #74c69d;
+            padding-bottom: 0.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Grid de Soluciones */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .solution-card {
+            border: 1px solid #e0e0e0;
+            border-left: 4px solid #2d6a4f;
+            border-radius: 6px;
+            padding: 1.2rem;
+            background-color: #fcfdfc;
+        }
+
+        .solution-card h3 {
+            color: #2d6a4f;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Multimedia */
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .video-responsive {
+            width: 100%;
+            max-width: 700px;
+            height: 380px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        /* Citas APA 7 */
+        .apa-reference {
+            padding-left: 2rem;
+            text-indent: -2rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
         footer {
             text-align: center;
-            padding: 1rem;
-            background-color: #e1e4e8;
-            color: #586069;
+            padding: 1.5rem;
+            background-color: #1b4332;
+            color: #ffffff;
+            margin-top: 2rem;
             font-size: 0.9rem;
+        }
+
+        /* Responsivo para móviles */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .video-responsive {
+                height: 220px;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>¡Página de Prueba en GitHub Pages!</h1>
+        <nav>
+            <div class="logo">Educación Ambiental</div>
+            <ul>
+                <li><a href="#diagnostico">Diagnóstico</a></li>
+                <li><a href="#soluciones">Soluciones</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#referencias">Referencias</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <div class="card">
-            <h2>Bienvenido</h2>
-            <p>Este es un diseño básico en HTML y CSS para probar la publicación de un sitio web en línea.</p>
-        </div>
-    </main>
+    <div class="hero">
+        <h1>Conciencia y Acción ante el Cambio Climático</h1>
+        <p>Un espacio educativo orientado a comprender los desafíos ambientales actuales y promover soluciones sostenibles.</p>
+    </div>
+
+    <div class="container">
+
+        <!-- Sección Diagnóstico -->
+        <section id="diagnostico">
+            <h2>Diagnóstico Ambiental</h2>
+            <p>
+                [Espacio reservado para redactar tu diagnóstico sobre la problemática ambiental o cambio climático estudiado en tu trabajo académico].
+            </p>
+        </section>
+
+        <!-- Sección Soluciones -->
+        <section id="soluciones">
+            <h2>Propuestas de Solución</h2>
+            <p>A continuación se detallan las estrategias orientadas a mitigar la problemática identificada:</p>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <h3>1. Solución / Estrategia 1</h3>
+                    <p>[Detalla aquí la primera solución planteada en tu investigación].</p>
+                </div>
+                <div class="solution-card">
+                    <h3>2. Solución / Estrategia 2</h3>
+                    <p>[Detalla aquí la segunda solución planteada en tu investigación].</p>
+                </div>
+                <div class="solution-card">
+                    <h3>3. Solución / Estrategia 3</h3>
+                    <p>[Detalla aquí la tercera solución planteada en tu investigación].</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Multimedia -->
+        <section id="multimedia">
+            <h2>Recursos Multimedia</h2>
+            <p>Recursos visuales y audiovisuales complementarios para reforzar el aprendizaje:</p>
+            <div class="media-container">
+                <!-- Puedes reemplazar este video con el enlace embebido de tu preferencia -->
+                <iframe class="video-responsive" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Recurso Educativo" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Sección Referencias APA 7 -->
+        <section id="referencias">
+            <h2>Referencias Bibliográficas (APA 7)</h2>
+            <div class="apa-reference">
+                Apellido, A. A. (Año). <em>Título del documento o libro en cursiva</em>. Editorial o Fuente. https://doi.org/xx.xxx/xxxx
+            </div>
+            <div class="apa-reference">
+                Organización de las Naciones Unidas. (2023). <em>Informe sobre el cambio climático</em>. https://www.un.org/...
+            </div>
+        </section>
+
+    </div>
 
     <footer>
-        <p>&copy; 2026 - Creado para probar GitHub</p>
+        <p>&copy; 2026 Proyecto Académico - Licenciatura en Informática Educativa</p>
     </footer>
 
 </body>
